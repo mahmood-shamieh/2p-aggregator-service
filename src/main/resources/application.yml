@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: AggregatorService
+
+server:
+  port: 8084
+
+services:
+  showService:
+    baseUrl: "http://localhost:8081"
+    getAllShowWithSearchAndPaginationUrl: "/shows/search/{page}?searchPhrase={search}&size={size}"
+  seasonService:
+    baseUrl: "http://localhost:8082"
+    getAllByShowIdUrl: "/seasons/getAll/{showId}"
