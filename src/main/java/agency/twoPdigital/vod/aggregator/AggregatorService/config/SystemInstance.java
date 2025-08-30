@@ -9,4 +9,5 @@ import lombok.ToString;
 @ToString
 public class SystemInstance {
     private String baseUrl;
+    private int timeOut;
 }

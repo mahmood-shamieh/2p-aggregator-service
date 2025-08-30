@@ -8,5 +8,5 @@ import lombok.ToString;
 @Setter
 @ToString
 public class ShowsSystemConfig extends SystemInstance{
-    private String getAllShowWithSearchAndPaginationUrl;
+    private String getAllShowWithSearchAndPaginationUrlForView;
 }
