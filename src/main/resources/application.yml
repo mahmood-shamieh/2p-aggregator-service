@@ -7,10 +7,10 @@ server:
 
 services:
   showService:
-    baseUrl: "http://localhost:8081"
+    baseUrl: ${SHOW_SERVICE_BASE_URL:http://localhost:8081}
     timeOut: 10
     getAllShowWithSearchAndPaginationUrlForView: "/shows/view/search/{page}?searchPhrase={search}&size={size}"
   seasonService:
-    baseUrl: "http://localhost:8082"
+    baseUrl: ${season_SERVICE_BASE_URL:http://localhost:8082}
     timeOut: 10
     getAllByShowIdUrl: "/seasons/view/getAll/{showId}"
