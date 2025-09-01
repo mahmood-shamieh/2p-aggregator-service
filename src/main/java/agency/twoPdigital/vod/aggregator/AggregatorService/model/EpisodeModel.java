@@ -1,32 +1,32 @@
 package agency.twoPdigital.vod.aggregator.AggregatorService.model;
 
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
-
-@Builder
-@Setter
 @Getter
-public class SeasonModel {
-
+@Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
+public class EpisodeModel {
     private Long id;
 
-    private Integer seasonNumber;
+    private int episodeNumber;
+
+    private Long seasonId;
 
     private String title;
 
     private String description;
 
-    private Long showId;
+    private List<MediaModel> mediaList;
 
-    private Boolean activated ;
+    private Boolean activated = false;
 
-    private List<EpisodeModel> episodeList;
     private LocalDateTime createdAt;
 
     private LocalDateTime updatedAt;
